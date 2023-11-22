@@ -37,9 +37,9 @@ let theme = createTheme({
     },
   },
   palette: {
-    mode: "dark",
+    mode: "light",
     text: {
-      primary: "#767676",
+      primary: "rgba(0,0,0,0.8)",
     },
     primary: {
       main: primaryColor,
@@ -49,12 +49,16 @@ let theme = createTheme({
       main: primarySecondary,
     },
     background: {
-      default: "#111111",
+      // default: "#111111",
       // paper: "#393939"
-      paper: "#0f240f",
+      // paper: "#0f240f",
     },
   },
-  typography: {},
+  typography: {
+    allVariants:{
+      color: "rgba(0,0,0,0.8)"
+    }
+  },
   components: {
     MuiContainer: {
       defaultProps: {

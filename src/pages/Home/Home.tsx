@@ -10,21 +10,27 @@ import Img4 from "src/assets/images/slider/4.png";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Hero from "./components/Hero";
+import SurveyReport from "./components/SurveyReport";
+import Manifesto from "./components/Manifesto";
+import Intro from "./components/Intro";
 const useStyles = makeStyles()((theme) => ({
   root: {
     // height: "100%",
-    background: `url(${Bg})`,
-    backgroundSize: "cover",
-    backgroundPositionX: "center",
-    backgroundPositionY: "center",
+    // background: `url(${Bg})`,
+    // backgroundSize: "cover",
+    // backgroundPositionX: "center",
+    // backgroundPositionY: "center",
   },
 }));
 
 const Home: FC = () => {
   const { classes } = useStyles();
   return (
-    <Box className={classes.root}>
+    <Box className={classes.root} sx={{ pb: 10 }}>
       <Hero />
+      <SurveyReport />
+      <Intro />
+      <Manifesto />
     </Box>
   );
 };
