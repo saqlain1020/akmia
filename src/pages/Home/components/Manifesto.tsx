@@ -4,6 +4,7 @@ import { Box, Container, Grid, ListItem, ListItemText, Typography, List } from "
 import { Fonts } from "src/utils";
 import Lottie from "react-lottie";
 import animationData from "src/assets/lottie/manifesto.json";
+import Slide from "react-reveal/Slide";
 
 const manifestoPoints = [
   "Converting marbles from feet system to meters.",
@@ -59,11 +60,13 @@ const Manifesto = () => {
               Manifesto
             </Typography>
             <Box sx={{ mt: 3 }}>
-              {manifestoPoints.map((item, i) => (
-                <Typography sx={{ mt: 1 }} className={classes.point}>
-                  <b>{i + 1}.</b> {item}
-                </Typography>
-              ))}
+              <Slide bottom cascade>
+                {manifestoPoints.map((item, i) => (
+                  <Typography sx={{ mt: 1 }} className={classes.point}>
+                    <b>{i + 1}.</b> {item}
+                  </Typography>
+                ))}
+              </Slide>
             </Box>
           </Grid>
           <Grid item xs={12} sm={12} md={6}>

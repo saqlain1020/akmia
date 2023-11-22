@@ -13,6 +13,7 @@ import Hero from "./components/Hero";
 import SurveyReport from "./components/SurveyReport";
 import Manifesto from "./components/Manifesto";
 import Intro from "./components/Intro";
+import Peoples from "./components/Peoples";
 const useStyles = makeStyles()((theme) => ({
   root: {
     // height: "100%",
@@ -31,6 +32,7 @@ const Home: FC = () => {
       <SurveyReport />
       <Intro />
       <Manifesto />
+      <Peoples/>
     </Box>
   );
 };

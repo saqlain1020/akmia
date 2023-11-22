@@ -95,17 +95,17 @@ let theme = createTheme({
     },
     MuiCard: {
       defaultProps: {
-        elevation: 0,
+        // elevation: 0,
       },
       styleOverrides: {
         root: {
-          color: "white",
-          background: "black",
-          borderRadius: 0,
-          padding: "10px 16px",
-          borderWidth: 3,
-          borderStyle: "solid",
-          borderColor: primaryColor,
+          // color: "white",
+          // background: "black",
+          // borderRadius: 0,
+          // padding: "10px 16px",
+          // borderWidth: 3,
+          // borderStyle: "solid",
+          // borderColor: primaryColor,
         },
       },
     },
