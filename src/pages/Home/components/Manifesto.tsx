@@ -1,6 +1,5 @@
-import React from "react";
 import { makeStyles } from "src/utils/makeStyles";
-import { Box, Container, Grid, ListItem, ListItemText, Typography, List } from "@mui/material";
+import { Box, Container, Grid, Typography } from "@mui/material";
 import { Fonts } from "src/utils";
 import Lottie from "react-lottie";
 import animationData from "src/assets/lottie/manifesto.json";

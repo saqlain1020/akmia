@@ -1,20 +1,14 @@
 import { FC } from "react";
 import { makeStyles } from "../../utils/makeStyles";
 
-import { Box, Container, Typography } from "@mui/material";
-import Bg from "src/assets/images/marble.jpg";
-import Img1 from "src/assets/images/slider/1.png";
-import Img2 from "src/assets/images/slider/2.png";
-import Img3 from "src/assets/images/slider/3.png";
-import Img4 from "src/assets/images/slider/4.png";
-import { Carousel } from "react-responsive-carousel";
+import { Box } from "@mui/material";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Hero from "./components/Hero";
 import SurveyReport from "./components/SurveyReport";
 import Manifesto from "./components/Manifesto";
 import Intro from "./components/Intro";
 import Peoples from "./components/Peoples";
-const useStyles = makeStyles()((theme) => ({
+const useStyles = makeStyles()(() => ({
   root: {
     // height: "100%",
     // background: `url(${Bg})`,
@@ -32,7 +26,7 @@ const Home: FC = () => {
       <SurveyReport />
       <Intro />
       <Manifesto />
-      <Peoples/>
+      <Peoples />
     </Box>
   );
 };

@@ -1,5 +1,4 @@
-import React from "react";
-import { Box, Container, Grid, Paper, Typography } from "@mui/material";
+import { Box, Container, Grid, Typography } from "@mui/material";
 import Img from "src/assets/images/survey.jpg";
 import { makeStyles } from "src/utils/makeStyles";
 import { Fonts } from "src/utils";

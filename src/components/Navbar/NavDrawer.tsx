@@ -11,7 +11,7 @@ interface IProps {
   setIsOpen: (isOpen: boolean) => void;
 }
 
-const useStyles = makeStyles()((theme) => ({
+const useStyles = makeStyles()(() => ({
   root: {
     // height: "100%",
   },

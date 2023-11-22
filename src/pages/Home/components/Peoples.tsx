@@ -1,5 +1,4 @@
-import React from "react";
-import { Box, Container, Card, Typography, Grid, CardActionArea, CardContent, CardMedia } from "@mui/material";
+import { Box, Container, Card, Typography, Grid } from "@mui/material";
 import { Fonts } from "src/utils";
 import { makeStyles } from "src/utils/makeStyles";
 import badar from "src/assets/images/people/badar.png";

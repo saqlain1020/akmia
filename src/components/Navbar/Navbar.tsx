@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { makeStyles } from "../../utils/makeStyles";
-import logo from "./../../assets/logo.png";
 import logoBig from "./../../assets/logoBig.png";
 import { Box, Container, Typography } from "@mui/material";
 import Navdrawer from "./NavDrawer";

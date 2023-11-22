@@ -1,5 +1,4 @@
 import { Box, Container, Typography } from "@mui/material";
-import React from "react";
 import { Fonts } from "src/utils";
 import { makeStyles } from "src/utils/makeStyles";
 

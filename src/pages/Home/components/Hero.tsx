@@ -1,7 +1,4 @@
-import React from "react";
-
-import { Box, Container, Typography } from "@mui/material";
-import Bg from "src/assets/images/marble.jpg";
+import { Box, Typography } from "@mui/material";
 import Img1 from "src/assets/images/slider/1.png";
 import Img2 from "src/assets/images/slider/2.png";
 import Img3 from "src/assets/images/slider/3.png";
@@ -9,7 +6,7 @@ import Img4 from "src/assets/images/slider/4.png";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { makeStyles } from "src/utils/makeStyles";
-const useStyles = makeStyles()((theme) => ({
+const useStyles = makeStyles()((_theme) => ({
   container: {
     // minHeight: "calc(100vh - 112px)",
     background: "linear-gradient(0deg, rgb(242,242,242,0.1),rgb(242,242,242))",
