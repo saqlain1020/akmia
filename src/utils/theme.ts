@@ -54,13 +54,31 @@ let theme = createTheme({
       paper: "#0f240f",
     },
   },
-  typography: {
-    fontFamily: "Rubik",
-  },
+  typography: {},
   components: {
     MuiContainer: {
       defaultProps: {
         maxWidth: false,
+      },
+    },
+    MuiDrawer: {
+      styleOverrides: {
+        paper: {
+          width: 300,
+          height: "calc(100% - 50px)",
+          marginTop: 25,
+          marginRight: 25,
+          borderRadius: 16,
+          background: "rgba(255,255,255,1)",
+          boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px",
+          "@media (max-width: 500px)": {
+            height: "calc(100%)",
+            marginTop: 0,
+            marginRight: 0,
+            borderRadius: 0,
+            width: "calc(100% - 70px)",
+          },
+        },
       },
     },
     MuiPaper: {
@@ -68,14 +86,7 @@ let theme = createTheme({
         elevation: 0,
       },
       styleOverrides: {
-        root: {
-          color: "white",
-          background: "black",
-          borderRadius: 0,
-          borderWidth: 2,
-          borderStyle: "solid",
-          borderColor: primaryColor,
-        },
+        root: {},
       },
     },
     MuiCard: {

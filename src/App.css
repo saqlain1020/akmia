@@ -4,3 +4,17 @@
   border: 0;
   box-sizing: border-box;
 }
+
+body {
+  background-color: #ffffff;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel.carousel-slider {
+  height: 100%;
+}
