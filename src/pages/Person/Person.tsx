@@ -1,5 +1,4 @@
-import { Box, Container, Grid, IconButton, Typography } from "@mui/material";
-import React from "react";
+import { Box, Container,  IconButton, Typography } from "@mui/material";
 import { useParams } from "react-router-dom";
 import { makeStyles } from "src/utils/makeStyles";
 import badar from "src/assets/images/people/badar.png";
@@ -53,7 +52,7 @@ const useStyles = makeStyles()((theme) => ({
 const Person = () => {
   const { name } = useParams();
   const { classes } = useStyles();
-
+  console.log(name);
   return (
     <Box sx={{ mt: 4, pb: 10 }}>
       <Container maxWidth="lg">
