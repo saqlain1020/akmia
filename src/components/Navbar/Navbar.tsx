@@ -6,10 +6,12 @@ import Navdrawer from "./NavDrawer";
 
 import Burger from "@animated-burgers/burger-slide";
 import "@animated-burgers/burger-slide/dist/styles.css";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles()((theme) => ({
   root: {
     // backgroundColor: "#f2f2f2",
+    boxShadow: "0px 0px 10px rgba(0,0,0,0.3)",
   },
   container: {
     display: "flex",
@@ -78,7 +80,9 @@ const Navbar = () => {
           <img className={classes.logo} alt="logo" src={logoBig} />
         </Box>
         <Box className={classes.links} sx={{ display: { xs: "none", sm: "none", md: "flex" } }}>
-          <Typography className={classes.link}>Home</Typography>
+          <Typography className={classes.link} component={Link} to="/">
+            Home
+          </Typography>
           <Typography className={classes.link}>About</Typography>
           <Typography className={classes.link}>Gallery</Typography>
           <Typography className={classes.link}>Employees</Typography>
