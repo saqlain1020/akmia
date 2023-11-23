@@ -5,6 +5,7 @@ import badar from "src/assets/images/people/badar.png";
 import Slide from "react-reveal/Slide";
 import LightSpeed from "react-reveal/LightSpeed";
 import { Link } from "react-router-dom";
+import clsx from "clsx";
 
 const useStyles = makeStyles()((theme) => ({
   heading: {
@@ -30,13 +31,18 @@ const useStyles = makeStyles()((theme) => ({
     boxShadow: "0px 8px 14px rgba(0,0,0,0.4)",
     "&:hover": {
       filter: "saturate(1)",
+      "& .boxCard": {
+        opacity: 1,
+      },
     },
     [theme.breakpoints.down("md")]: {
       filter: "saturate(1)",
     },
   },
   boxCard: {
+    transition: "all 300ms ease-in-out",
     position: "absolute",
+    opacity: 0,
     width: "calc(100% - 40px)",
     left: 20,
     bottom: 20,
@@ -46,6 +52,7 @@ const useStyles = makeStyles()((theme) => ({
       padding: 8,
       width: "calc(100% - 20px)",
       left: 10,
+      opacity: 1,
       bottom: 10,
     },
   },
@@ -72,7 +79,7 @@ const Peoples = () => {
             <Slide bottom>
               <Box className={classes.box} component={Link} to="/person/badar">
                 <img src={badar} alt="Badar Iqbal" width="100%" />
-                <Card className={classes.boxCard}>
+                <Card className={clsx(classes.boxCard, "boxCard")}>
                   <Typography variant="h5" fontWeight={"bold"} fontSize={{ xs: 12, sm: 16, md: 20 }}>
                     Badar Iqbal
                   </Typography>
@@ -87,7 +94,7 @@ const Peoples = () => {
             <Slide bottom>
               <Box className={classes.box} component={Link} to="/person/badar">
                 <img src={badar} alt="Badar Iqbal" width="100%" />
-                <Card className={classes.boxCard}>
+                <Card className={clsx(classes.boxCard, "boxCard")}>
                   <Typography variant="h5" fontWeight={"bold"} fontSize={{ xs: 12, sm: 16, md: 20 }}>
                     Badar Iqbal
                   </Typography>
@@ -102,7 +109,7 @@ const Peoples = () => {
             <Slide bottom>
               <Box className={classes.box} component={Link} to="/person/badar">
                 <img src={badar} alt="Badar Iqbal" width="100%" />
-                <Card className={classes.boxCard}>
+                <Card className={clsx(classes.boxCard, "boxCard")}>
                   <Typography variant="h5" fontWeight={"bold"} fontSize={{ xs: 12, sm: 16, md: 20 }}>
                     Badar Iqbal
                   </Typography>
@@ -117,7 +124,7 @@ const Peoples = () => {
             <Slide bottom>
               <Box className={classes.box} component={Link} to="/person/badar">
                 <img src={badar} alt="Badar Iqbal" width="100%" />
-                <Card className={classes.boxCard}>
+                <Card className={clsx(classes.boxCard, "boxCard")}>
                   <Typography variant="h5" fontWeight={"bold"} fontSize={{ xs: 12, sm: 16, md: 20 }}>
                     Badar Iqbal
                   </Typography>
@@ -132,7 +139,7 @@ const Peoples = () => {
             <Slide bottom>
               <Box className={classes.box} component={Link} to="/person/badar">
                 <img src={badar} alt="Badar Iqbal" width="100%" />
-                <Card className={classes.boxCard}>
+                <Card className={clsx(classes.boxCard, "boxCard")}>
                   <Typography variant="h5" fontWeight={"bold"} fontSize={{ xs: 12, sm: 16, md: 20 }}>
                     Badar Iqbal
                   </Typography>
