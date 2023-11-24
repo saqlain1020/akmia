@@ -7,7 +7,7 @@ import Slide from "react-reveal/Slide";
 
 const manifestoPoints = [
   "Converting marbles from feet system to meters.",
-  "Shifting logistics from truck mafia to train.",
+  "Shifting logistics to train for decreasing cost of transportation.",
   "To dry the marble leachate powder and enter it in other industries.",
   "To generate revenue by crushing vestiges into grains and seeds.",
   "After the announcement of the transfer of Pak Colony marble market in 2010, the acquisition of the land located at Methani.",

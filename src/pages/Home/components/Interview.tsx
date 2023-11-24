@@ -31,7 +31,7 @@ const Interview = () => {
         fontFamily={Fonts.Monteserrat}
         align="center"
         color="inherit"
-        sx={{ mt: 4, pt: 2, cursor: "pointer" }}
+        sx={{ pt: 2, cursor: "pointer", textShadow: "0px 5px 10px rgba(0,0,0,0.6)" }}
       >
         Founder Chairman Interview
       </Typography>

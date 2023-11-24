@@ -13,7 +13,7 @@ const SurveyReport = () => {
   const { classes } = useStyles();
   return (
     <Box>
-      <Container maxWidth="xl" sx={{ pt: 10 }}>
+      <Container maxWidth="xl" sx={{ pt: 2 }}>
         <Grid container spacing={4}>
           <Grid item xs={12} sm={12} md={6}>
             <Box className="center" sx={{ height: "100%" }}>

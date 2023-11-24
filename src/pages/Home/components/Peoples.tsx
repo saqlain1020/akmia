@@ -1,4 +1,4 @@
-import { Box, Container, Card, Typography, Grid } from "@mui/material";
+import { Box, Container, Card, Typography, Grid, CardActionArea, CardContent, CardMedia } from "@mui/material";
 import { Fonts } from "src/utils";
 import { makeStyles } from "src/utils/makeStyles";
 import badar from "src/assets/images/people/badar.png";
@@ -6,6 +6,7 @@ import Slide from "react-reveal/Slide";
 import LightSpeed from "react-reveal/LightSpeed";
 import { Link } from "react-router-dom";
 import clsx from "clsx";
+import peoples from "src/config/peoples";
 
 const useStyles = makeStyles()((theme) => ({
   heading: {
@@ -62,7 +63,7 @@ const Peoples = () => {
 
   return (
     <Box sx={{ background: "#f2f3f5" }}>
-      <Container maxWidth="lg" sx={{ pt: 5 }}>
+      <Container maxWidth="lg" sx={{ pt: 5, pb: 5 }}>
         <LightSpeed left>
           <Typography
             sx={{ mb: 3 }}
@@ -75,98 +76,44 @@ const Peoples = () => {
           </Typography>
         </LightSpeed>
         <Grid container spacing={{ xs: 1, sm: 2, md: 4 }}>
-          <Grid item xs={6} sm={6} md={4}>
-            <Slide bottom>
-              <Box className={classes.box} component={Link} to="/person/badar">
-                <img src={badar} alt="Badar Iqbal" width="100%" />
-                <Card className={clsx(classes.boxCard, "boxCard")}>
-                  <Typography variant="h5" fontWeight={"bold"} fontSize={{ xs: 12, sm: 16, md: 20 }}>
-                    Badar Iqbal
-                  </Typography>
-                  <Typography color="primary" fontSize={{ xs: 10, sm: 12, md: 16 }}>
-                    Founder Chairman
-                  </Typography>
-                </Card>
-              </Box>
-            </Slide>
-          </Grid>
-          <Grid item xs={6} sm={6} md={4}>
-            <Slide bottom>
-              <Box className={classes.box} component={Link} to="/person/badar">
-                <img src={badar} alt="Badar Iqbal" width="100%" />
-                <Card className={clsx(classes.boxCard, "boxCard")}>
-                  <Typography variant="h5" fontWeight={"bold"} fontSize={{ xs: 12, sm: 16, md: 20 }}>
-                    Badar Iqbal
-                  </Typography>
-                  <Typography color="primary" fontSize={{ xs: 10, sm: 12, md: 16 }}>
-                    Founder Chairman
-                  </Typography>
-                </Card>
-              </Box>
-            </Slide>
-          </Grid>
-          <Grid item xs={6} sm={6} md={4}>
-            <Slide bottom>
-              <Box className={classes.box} component={Link} to="/person/badar">
-                <img src={badar} alt="Badar Iqbal" width="100%" />
-                <Card className={clsx(classes.boxCard, "boxCard")}>
-                  <Typography variant="h5" fontWeight={"bold"} fontSize={{ xs: 12, sm: 16, md: 20 }}>
-                    Badar Iqbal
-                  </Typography>
-                  <Typography color="primary" fontSize={{ xs: 10, sm: 12, md: 16 }}>
-                    Founder Chairman
-                  </Typography>
-                </Card>
-              </Box>
-            </Slide>
-          </Grid>
-          <Grid item xs={6} sm={6} md={4}>
-            <Slide bottom>
-              <Box className={classes.box} component={Link} to="/person/badar">
-                <img src={badar} alt="Badar Iqbal" width="100%" />
-                <Card className={clsx(classes.boxCard, "boxCard")}>
-                  <Typography variant="h5" fontWeight={"bold"} fontSize={{ xs: 12, sm: 16, md: 20 }}>
-                    Badar Iqbal
-                  </Typography>
-                  <Typography color="primary" fontSize={{ xs: 10, sm: 12, md: 16 }}>
-                    Founder Chairman
-                  </Typography>
-                </Card>
-              </Box>
-            </Slide>
-          </Grid>
-          <Grid item xs={6} sm={6} md={4}>
-            <Slide bottom>
-              <Box className={classes.box} component={Link} to="/person/badar">
-                <img src={badar} alt="Badar Iqbal" width="100%" />
-                <Card className={clsx(classes.boxCard, "boxCard")}>
-                  <Typography variant="h5" fontWeight={"bold"} fontSize={{ xs: 12, sm: 16, md: 20 }}>
-                    Badar Iqbal
-                  </Typography>
-                  <Typography color="primary" fontSize={{ xs: 10, sm: 12, md: 16 }}>
-                    Founder Chairman
-                  </Typography>
-                </Card>
-              </Box>
-            </Slide>
-          </Grid>
           {/* <Grid item xs={6} sm={6} md={4}>
-            <Card>
-              <CardActionArea>
-                <CardMedia component="img" image={badar} alt="Badar Iqbal" />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" fontWeight={600}>
+            <Slide bottom>
+              <Box className={classes.box} component={Link} to="/person/badar">
+                <img src={badar} alt="Badar Iqbal" width="100%" />
+                <Card className={clsx(classes.boxCard, "boxCard")}>
+                  <Typography variant="h5" fontWeight={"bold"} fontSize={{ xs: 12, sm: 16, md: 20 }}>
                     Badar Iqbal
                   </Typography>
-                  <Typography variant="body2" color="primary">
+                  <Typography color="primary" fontSize={{ xs: 10, sm: 12, md: 16 }}>
                     Founder Chairman
-                    <br />
-                    M/S Bisma Marble
                   </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
+                </Card>
+              </Box>
+            </Slide>
           </Grid> */}
+          {peoples.map((item, i) => (
+            <Grid item xs={6} key={i} sm={6} md={4}>
+              <Slide bottom>
+                <Link to={`/person/${item.tag}`}>
+                  <Card elevation={5}>
+                    <CardActionArea>
+                      <CardMedia component="img" image={item.image} alt={item.name} sx={{ aspectRatio: "1/1" }} />
+                      <CardContent>
+                        <Typography gutterBottom variant="h5" fontWeight={600}>
+                          {item.name}
+                        </Typography>
+                        {item.titleCardLines.map((item) => (
+                          <Typography key={item} variant="body2" color="primary">
+                            {item}
+                          </Typography>
+                        ))}
+                      </CardContent>
+                    </CardActionArea>
+                  </Card>
+                </Link>
+              </Slide>
+            </Grid>
+          ))}
         </Grid>
       </Container>
     </Box>

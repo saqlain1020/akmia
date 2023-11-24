@@ -55,9 +55,9 @@ let theme = createTheme({
     },
   },
   typography: {
-    allVariants:{
-      color: "rgba(0,0,0,0.8)"
-    }
+    allVariants: {
+      color: "rgba(0,0,0,0.8)",
+    },
   },
   components: {
     MuiContainer: {
@@ -101,7 +101,7 @@ let theme = createTheme({
         root: {
           // color: "white",
           // background: "black",
-          // borderRadius: 0,
+          borderRadius: 6,
           // padding: "10px 16px",
           // borderWidth: 3,
           // borderStyle: "solid",
@@ -149,34 +149,7 @@ let theme = createTheme({
         size: "small",
       },
     },
-    MuiButton: {
-      defaultProps: {
-        variant: "contained",
-        disableElevation: true,
-      },
-      styleOverrides: {
-        root: {
-          borderRadius: 0,
-        },
-      },
-    },
-    // @ts-ignore
-    MuiLoadingButton: {
-      defaultProps: {
-        variant: "contained",
-        disableElevation: true,
-        loadingPosition: "start",
-      },
-      styleOverrides: {
-        // @ts-ignore
-        root: ({ ownerState }) => ({
-          transition: "padding 300ms ease-in-out",
-          ...(ownerState.loading && {
-            paddingLeft: "2.5rem",
-          }),
-        }),
-      },
-    },
+    MuiButton: {},
   },
 });
 

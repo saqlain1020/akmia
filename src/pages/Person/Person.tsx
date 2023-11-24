@@ -1,4 +1,4 @@
-import { Box, Container,  IconButton, Typography } from "@mui/material";
+import { Box, Button, Container, IconButton, Typography } from "@mui/material";
 import { useParams } from "react-router-dom";
 import { makeStyles } from "src/utils/makeStyles";
 import badar from "src/assets/images/people/badar.png";
@@ -6,15 +6,17 @@ import { Fonts } from "src/utils";
 import clsx from "clsx";
 import fb from "src/assets/icons/facebook.svg";
 import email from "src/assets/icons/email.svg";
-import bisma from "src/assets/images/bisma.jpeg";
-
-import Masonry from "@mui/lab/Masonry";
+import { ArrowRight } from "@mui/icons-material";
+import peoples from "src/config/peoples";
+import { useMemo } from "react";
 
 const useStyles = makeStyles()((theme) => ({
   imgWrapper: {
     padding: 6,
     border: `4px dashed ${theme.palette.secondary.main}`,
     maxWidth: 400,
+    height: "fit-content",
+    boxShadow: theme.shadows[10]
   },
   leftBoder: {
     borderLeft: `4px solid ${theme.palette.primary.main}`,
@@ -52,13 +54,21 @@ const useStyles = makeStyles()((theme) => ({
 const Person = () => {
   const { name } = useParams();
   const { classes } = useStyles();
-  console.log(name);
+
+  const personData = useMemo(() => peoples.find((item) => item.tag === name), [name]);
+
+  if (!personData)
+    return (
+      <Typography variant="h3" align="center" color="primary">
+        Not Found!
+      </Typography>
+    );
   return (
     <Box sx={{ mt: 4, pb: 10 }}>
       <Container maxWidth="lg">
         <Box sx={{ display: "flex", gap: 4, flexWrap: "wrap" }}>
           <Box className={classes.imgWrapper}>
-            <img src={badar} width="100%" style={{ maxWidth: 300 }} />
+            <img src={personData?.image} width="100%" style={{ maxWidth: 300 }} />
           </Box>
           <Box>
             <Typography
@@ -67,39 +77,46 @@ const Person = () => {
               variant="h3"
               className={clsx(classes.hoverText, classes.leftBoder)}
             >
-              Badar Iqbal
+              {personData.name}
             </Typography>
             <Typography color="primary" fontWeight={600} variant="h5">
-              Founder Chairman
+              {personData.designation}
             </Typography>
-            <Typography fontWeight={"bold"} className={classes.hoverText}>
-              All Karachi Marbles Industries Association
-            </Typography>
-            <Typography fontWeight={"bold"} className={classes.hoverText}>
-              Bisma Marbles
-            </Typography>
+            {personData.industry.map((item) => (
+              <Typography key={item} fontWeight={"bold"} className={classes.hoverText}>
+                {item}
+              </Typography>
+            ))}
             <Typography variant="h5" sx={{ mt: 2 }} fontWeight={800}>
               Contact
             </Typography>
-            <Typography variant="body1" sx={{ mt: 0 }}>
-              +92-313-9292654 <br />
-              +92-300-2292654
-            </Typography>
+            {personData.contact.map((item) => (
+              <Typography key={item} variant="body1" sx={{ mt: 0 }}>
+                {item}
+              </Typography>
+            ))}
             <Typography variant="h5" sx={{ mt: 2 }} fontWeight={800}>
               Socials
             </Typography>
             <Box>
-              <IconButton sx={{ width: 60, height: 60 }}>
-                <img src={fb} width={35} />
-              </IconButton>
-              <IconButton sx={{ width: 60, height: 60 }}>
-                <img src={email} width={50} />
-              </IconButton>
+              {personData.facebook && (
+                <IconButton sx={{ width: 60, height: 60 }} target="_blank" href={personData.facebook}>
+                  <img src={fb} width={35} />
+                </IconButton>
+              )}
+              {personData.email && (
+                <IconButton sx={{ width: 60, height: 60 }} href={`mailto:${personData.email}`}>
+                  <img src={email} width={50} />
+                </IconButton>
+              )}
             </Box>
+            <Button variant="outlined" sx={{ mt: 1 }}>
+              Gallery <ArrowRight />
+            </Button>
           </Box>
         </Box>
       </Container>
-      <Typography
+      {/* <Typography
         variant="h2"
         fontWeight={800}
         fontFamily={Fonts.Monteserrat}
@@ -135,7 +152,7 @@ const Person = () => {
             />
           </div>
         </Masonry>
-      </Container>
+      </Container> */}
     </Box>
   );
 };

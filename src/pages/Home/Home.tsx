@@ -23,7 +23,7 @@ const Home: FC = () => {
   const { classes } = useStyles();
   return (
     <Box className={classes.root} sx={{ pb: 10 }}>
-      <Hero />
+      {/* <Hero /> */}
       <SurveyReport />
       <Intro />
       <Manifesto />
