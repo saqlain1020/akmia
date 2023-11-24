@@ -3,7 +3,6 @@ import { makeStyles } from "../../utils/makeStyles";
 
 import { Box } from "@mui/material";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import Hero from "./components/Hero";
 import SurveyReport from "./components/SurveyReport";
 import Manifesto from "./components/Manifesto";
 import Intro from "./components/Intro";

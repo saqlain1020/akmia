@@ -1,11 +1,9 @@
 import { Box, Container, Card, Typography, Grid, CardActionArea, CardContent, CardMedia } from "@mui/material";
 import { Fonts } from "src/utils";
 import { makeStyles } from "src/utils/makeStyles";
-import badar from "src/assets/images/people/badar.png";
 import Slide from "react-reveal/Slide";
 import LightSpeed from "react-reveal/LightSpeed";
 import { Link } from "react-router-dom";
-import clsx from "clsx";
 import peoples from "src/config/peoples";
 
 const useStyles = makeStyles()((theme) => ({
