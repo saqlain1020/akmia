@@ -15,6 +15,7 @@ interface IPeople {
   facebook?: string;
   email?: string;
   titleCardLines: string[];
+  whatsapp?: string;
   tag: string;
 }
 
@@ -29,6 +30,7 @@ const peoples: IPeople[] = [
     email: "bismamarble@email.com",
     titleCardLines: ["Founder Chairman", "M/S Bisma Marbles Industry"],
     tag: "badar",
+    whatsapp: "+923139292654"
   },
   {
     name: "Saifullah Khan Niaz",
@@ -51,11 +53,13 @@ const peoples: IPeople[] = [
   {
     name: "Inayat-ur-rahman",
     designation: "Vice Chairman Industres",
-    industry: ["M/S Rahman city marble"],
-    titleCardLines: ["Vice Chairman Industres", "M/S Rahman city marble"],
-    contact: ["+92-321-212521"],
+    industry: ["M/S Rehman City Marble"],
+    titleCardLines: ["Vice Chairman Industres", "M/S Rehman City Marble"],
+    contact: ["+92-321-212521", "+92-347-4747947"],
     tag: "inayarurrehman",
     image: innayat,
+    email: "rehmancity@gmail.com",
+    whatsapp: "+923212125219"
   },
   {
     name: "Muhammad Irshad",

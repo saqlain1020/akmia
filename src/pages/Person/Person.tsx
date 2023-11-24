@@ -1,11 +1,11 @@
 import { Box, Button, Container, IconButton, Typography } from "@mui/material";
 import { useParams } from "react-router-dom";
 import { makeStyles } from "src/utils/makeStyles";
-import badar from "src/assets/images/people/badar.png";
 import { Fonts } from "src/utils";
 import clsx from "clsx";
 import fb from "src/assets/icons/facebook.svg";
 import email from "src/assets/icons/email.svg";
+import whatsapp from "src/assets/icons/whatsapp.svg";
 import { ArrowRight } from "@mui/icons-material";
 import peoples from "src/config/peoples";
 import { useMemo } from "react";
@@ -16,7 +16,7 @@ const useStyles = makeStyles()((theme) => ({
     border: `4px dashed ${theme.palette.secondary.main}`,
     maxWidth: 400,
     height: "fit-content",
-    boxShadow: theme.shadows[10]
+    boxShadow: theme.shadows[10],
   },
   leftBoder: {
     borderLeft: `4px solid ${theme.palette.primary.main}`,
@@ -99,6 +99,15 @@ const Person = () => {
               Socials
             </Typography>
             <Box>
+              {personData.whatsapp && (
+                <IconButton
+                  sx={{ width: 60, height: 60 }}
+                  target="_blank"
+                  href={`https://wa.me/${personData.whatsapp}`}
+                >
+                  <img src={whatsapp} width={45} />
+                </IconButton>
+              )}
               {personData.facebook && (
                 <IconButton sx={{ width: 60, height: 60 }} target="_blank" href={personData.facebook}>
                   <img src={fb} width={35} />
