@@ -1,4 +1,3 @@
-import React from "react";
 import { makeStyles } from "src/utils/makeStyles";
 import { Box, Container, Typography } from "@mui/material";
 import { Fonts } from "src/utils";
