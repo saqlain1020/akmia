@@ -8,6 +8,7 @@ import Manifesto from "./components/Manifesto";
 import Intro from "./components/Intro";
 import Peoples from "./components/Peoples";
 import Interview from "./components/Interview";
+import Gallery from "./components/Gallery";
 const useStyles = makeStyles()(() => ({
   root: {
     // height: "100%",
@@ -27,7 +28,8 @@ const Home: FC = () => {
       <Intro />
       <Manifesto />
       <Peoples />
-      <Interview/>
+      <Interview />
+      <Gallery />
     </Box>
   );
 };
