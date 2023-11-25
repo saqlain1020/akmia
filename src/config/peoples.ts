@@ -5,11 +5,14 @@ import innayat from "src/assets/images/people/innayat.png";
 import irshad from "src/assets/images/people/irshad.png";
 import shakirullah from "src/assets/images/people/shakirullah.jpg";
 import shoaib from "src/assets/images/people/shoaib.png";
+import mansoor from "src/assets/images/people/mansoor.png";
+import muneer from "src/assets/images/people/muneer.jpeg";
+import adnan from "src/assets/images/people/adnan.jpeg";
 
 interface IPeople {
   name: string;
   image: string;
-  designation: string;
+  designation?: string;
   industry: string[];
   contact: string[];
   facebook?: string;
@@ -30,7 +33,7 @@ const peoples: IPeople[] = [
     email: "bismamarble@email.com",
     titleCardLines: ["Founder Chairman", "M/S Bisma Marbles Industry"],
     tag: "badar",
-    whatsapp: "+923139292654"
+    whatsapp: "+923139292654",
   },
   {
     name: "Saifullah Khan Niaz",
@@ -59,7 +62,7 @@ const peoples: IPeople[] = [
     tag: "inayarurrehman",
     image: innayat,
     email: "rehmancity@gmail.com",
-    whatsapp: "+923212125219"
+    whatsapp: "+923212125219",
   },
   {
     name: "Muhammad Irshad",
@@ -87,6 +90,30 @@ const peoples: IPeople[] = [
     titleCardLines: ["Finance Secretary", "Firdous Marble"],
     tag: "shoaib",
     image: shoaib,
+  },
+  {
+    name: "Mansoor Ali",
+    industry: ["Inayat Marble"],
+    contact: ["+92-332-2238657"],
+    titleCardLines: ["Inayat Marble", "."],
+    tag: "mansoor",
+    image: mansoor,
+  },
+  {
+    name: "Muneer",
+    industry: ["Muneer Marble"],
+    contact: ["+92-321-2964756"],
+    titleCardLines: ["Muneer Marble", "."],
+    tag: "muneer",
+    image: muneer,
+  },
+  {
+    name: "Adnan",
+    industry: ["New Dilawer Marble"],
+    contact: ["+92-316-2147812"],
+    titleCardLines: ["New Dilawer Marble", "."],
+    tag: "adnan",
+    image: adnan,
   },
 ];
 

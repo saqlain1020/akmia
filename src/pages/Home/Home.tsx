@@ -9,6 +9,7 @@ import Intro from "./components/Intro";
 import Peoples from "./components/Peoples";
 import Interview from "./components/Interview";
 import Gallery from "./components/Gallery";
+import AboutFounder from "./components/AboutFounder";
 const useStyles = makeStyles()(() => ({
   root: {
     // height: "100%",
@@ -29,6 +30,7 @@ const Home: FC = () => {
       <Manifesto />
       <Peoples />
       <Interview />
+      <AboutFounder />
       <Gallery />
     </Box>
   );
