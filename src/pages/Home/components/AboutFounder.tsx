@@ -36,7 +36,7 @@ const useStyles = makeStyles()((theme) => ({
 const AboutFounder = () => {
   const { classes } = useStyles();
   return (
-    <Box sx={{ mt: 4 }}>
+    <Box sx={{ mt: 4 }} id="about">
       <Container maxWidth="lg">
         <Typography variant="h3" className={classes.heading}>
           About Founder
@@ -47,14 +47,20 @@ const AboutFounder = () => {
         <Typography sx={{ mt: 1 }}>
           Main Badr Iqbal, my dear father, by blessing his glass factory in 1975, started Main Marble Kayin Industries
           in Pak Colony by buying a copy of Italian Marble Machineries copied by Mazar Quaid. In 1984, he was one of the
-          founders of the All Pakistan Marble Industries Association, formed on the marble tax reforms.<br/><br/>I joined my
-          father in 1992 as an elder son after becoming an architect with formal BSc (Bachelor of Science) education.
-          Zafar Marbal Sadia Marbal later went on to build other firms.<br/><br/>In 2012, due to gang war and Taliban's extortion
-          in industries and target killing of traders, Ahl Maril traders made their representative on industries and
-          market protection and resorted to using government policies and measures. By adopting such association
-          policies, Pakistan Marble Industries is now working to overcome its past shortcomings.<br/><br/>In 2015, All Karachi
-          Marble Industries Association was founded with the help of Shoaib Ishaq and Al Karachi Marble Industries with
-          his firm Bisma Marble Industry.
+          founders of the All Pakistan Marble Industries Association, formed on the marble tax reforms.
+          <br />
+          <br />I joined my father in 1992 as an elder son after becoming an architect with formal BSc (Bachelor of
+          Science) education. Zafar Marbal Sadia Marbal later went on to build other firms.
+          <br />
+          <br />
+          In 2012, due to gang war and Taliban's extortion in industries and target killing of traders, Ahl Maril
+          traders made their representative on industries and market protection and resorted to using government
+          policies and measures. By adopting such association policies, Pakistan Marble Industries is now working to
+          overcome its past shortcomings.
+          <br />
+          <br />
+          In 2015, All Karachi Marble Industries Association was founded with the help of Shoaib Ishaq and Al Karachi
+          Marble Industries with his firm Bisma Marble Industry.
         </Typography>
         <Typography variant="h5" sx={{ mt: 5 }} fontWeight={600}>
           Become a Founding Member

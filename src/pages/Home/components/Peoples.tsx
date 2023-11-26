@@ -60,7 +60,7 @@ const Peoples = () => {
   const { classes } = useStyles();
 
   return (
-    <Box sx={{ background: "#f2f3f5" }}>
+    <Box id="executives" sx={{ background: "#f2f3f5" }}>
       <Container maxWidth="lg" sx={{ pt: 5, pb: 5 }}>
         <LightSpeed left>
           <Typography

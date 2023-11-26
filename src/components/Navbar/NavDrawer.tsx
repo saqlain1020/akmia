@@ -48,16 +48,16 @@ const Navdrawer: React.FC<IProps> = ({ isOpen, setIsOpen }) => {
         <Typography component={Link} to="/" onClick={() => setIsOpen(false)} className={classes.link}>
           Home
         </Typography>
-        <Typography component={Link} to="/" onClick={() => setIsOpen(false)} className={classes.link}>
+        <Typography component="a" href="#about" onClick={() => setIsOpen(false)} className={classes.link}>
           About
         </Typography>
-        <Typography component={Link} to="/" onClick={() => setIsOpen(false)} className={classes.link}>
+        <Typography component="a" href="#gallery" onClick={() => setIsOpen(false)} className={classes.link}>
           Gallery
         </Typography>
-        <Typography component={Link} to="/" onClick={() => setIsOpen(false)} className={classes.link}>
-          Employees
+        <Typography component="a" href="#executives" onClick={() => setIsOpen(false)} className={classes.link}>
+          Executives
         </Typography>
-        <Typography component={Link} to="/" onClick={() => setIsOpen(false)} className={classes.link}>
+        <Typography component="a" href="#contact" onClick={() => setIsOpen(false)} className={classes.link}>
           Contact
         </Typography>
       </div>

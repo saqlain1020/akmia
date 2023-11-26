@@ -1,4 +1,4 @@
-import { Box, Button, Container, IconButton, Typography } from "@mui/material";
+import { Box, Container, IconButton, Typography } from "@mui/material";
 import { useParams } from "react-router-dom";
 import { makeStyles } from "src/utils/makeStyles";
 import { Fonts } from "src/utils";
@@ -6,7 +6,7 @@ import clsx from "clsx";
 import fb from "src/assets/icons/facebook.svg";
 import email from "src/assets/icons/email.svg";
 import whatsapp from "src/assets/icons/whatsapp.svg";
-import { ArrowRight } from "@mui/icons-material";
+// import { ArrowRight } from "@mui/icons-material";
 import peoples from "src/config/peoples";
 import { useMemo } from "react";
 
@@ -119,9 +119,9 @@ const Person = () => {
                 </IconButton>
               )}
             </Box>
-            <Button variant="outlined" sx={{ mt: 1 }}>
+            {/* <Button variant="outlined" sx={{ mt: 1 }}>
               Gallery <ArrowRight />
-            </Button>
+            </Button> */}
           </Box>
         </Box>
       </Container>

@@ -67,7 +67,7 @@ const Gallery = () => {
   const [select, setSelect] = useState("1");
 
   return (
-    <div>
+    <div id="gallery">
       <Container maxWidth="lg" sx={{ mt: 4 }}>
         <Typography
           className={classes.heading}

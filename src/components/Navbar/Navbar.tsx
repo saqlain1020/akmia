@@ -83,10 +83,18 @@ const Navbar = () => {
           <Typography className={classes.link} component={Link} to="/">
             Home
           </Typography>
-          <Typography className={classes.link}>About</Typography>
-          <Typography className={classes.link}>Gallery</Typography>
-          <Typography className={classes.link}>Employees</Typography>
-          <Typography className={classes.link}>Contact</Typography>
+          <Typography component="a" href="#about" className={classes.link}>
+            About
+          </Typography>
+          <Typography component="a" href="#gallery" className={classes.link}>
+            Gallery
+          </Typography>
+          <Typography component="a" href="#executives" className={classes.link}>
+            Executives
+          </Typography>
+          <Typography component="a" href="#contact" className={classes.link}>
+            Contact
+          </Typography>
         </Box>
         <Burger isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} className={classes.burger} />
         <Navdrawer isOpen={isOpen} setIsOpen={setIsOpen} />

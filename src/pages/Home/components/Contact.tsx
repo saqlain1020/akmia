@@ -1,5 +1,4 @@
 import { Box, Container, Grid, Typography } from "@mui/material";
-import React from "react";
 import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 import { makeStyles } from "src/utils/makeStyles";
 import Lottie from "react-lottie";
@@ -36,7 +35,7 @@ const useStyles = makeStyles()((theme) => ({
 const Contact = () => {
   const { classes } = useStyles();
   return (
-    <Box sx={{ background: "rgb(17 193 17 / 18%)", py: 3 }}>
+    <Box id="contact" sx={{ background: "rgb(17 193 17 / 18%)", py: 3 }}>
       <Container maxWidth="lg">
         <Typography variant="h3" className={classes.heading} sx={{ pt: 2 }}>
           Get in Touch
