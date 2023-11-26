@@ -130,20 +130,7 @@ let theme = createTheme({
         },
       ],
     },
-    MuiTextField: {
-      variants: [
-        {
-          props: {
-            variant: "standard",
-          },
-          style: {
-            "& *": {
-              color: "white",
-            },
-          },
-        },
-      ],
-    },
+   
     MuiRadio: {
       defaultProps: {
         size: "small",
