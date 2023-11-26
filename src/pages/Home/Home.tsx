@@ -10,6 +10,8 @@ import Peoples from "./components/Peoples";
 import Interview from "./components/Interview";
 import Gallery from "./components/Gallery";
 import AboutFounder from "./components/AboutFounder";
+import Contact from "./components/Contact";
+import ScrollDown from "src/components/ScrollDown/ScrollDown";
 const useStyles = makeStyles()(() => ({
   root: {
     // height: "100%",
@@ -23,7 +25,7 @@ const useStyles = makeStyles()(() => ({
 const Home: FC = () => {
   const { classes } = useStyles();
   return (
-    <Box className={classes.root} sx={{ pb: 10 }}>
+    <Box className={classes.root}>
       {/* <Hero /> */}
       <SurveyReport />
       <Intro />
@@ -32,6 +34,8 @@ const Home: FC = () => {
       <Interview />
       <AboutFounder />
       <Gallery />
+      <Contact />
+      <ScrollDown />
     </Box>
   );
 };
