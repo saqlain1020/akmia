@@ -12,6 +12,7 @@ import Gallery from "./components/Gallery";
 import AboutFounder from "./components/AboutFounder";
 import Contact from "./components/Contact";
 import ScrollDown from "src/components/ScrollDown/ScrollDown";
+import GalleryCarousel from "./components/GalleryCarousel";
 const useStyles = makeStyles()(() => ({
   root: {
     // height: "100%",
@@ -33,6 +34,7 @@ const Home: FC = () => {
       <Peoples />
       <Interview />
       <AboutFounder />
+      <GalleryCarousel />
       <Gallery />
       <Contact />
       <ScrollDown />
