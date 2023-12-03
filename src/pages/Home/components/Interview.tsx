@@ -6,7 +6,7 @@ import vid2 from "src/assets/vids/interview2.mp4";
 import Fade from "react-reveal/Fade";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Pagination, Navigation } from "swiper/modules";
 
 const useStyles = makeStyles()((theme) => ({
   root: {
@@ -53,16 +53,11 @@ const useStyles = makeStyles()((theme) => ({
 const Interview = () => {
   const { classes } = useStyles();
   return (
-    <Box  sx={{pt:6}} className={classes.root} >
-      <Typography
-        variant="h3"
-        fontWeight={800}
-        fontFamily={Fonts.Monteserrat}
-        className={classes.heading}
-      >
+    <Box sx={{ pt: 6 }} className={classes.root}>
+      <Typography variant="h3" fontWeight={800} fontFamily={Fonts.Monteserrat} className={classes.heading}>
         Interviews
       </Typography>
-      <Container maxWidth="lg" sx={{ py:4 }}>
+      <Container maxWidth="lg" sx={{ py: 4 }}>
         <Fade bottom>
           <Swiper
             slidesPerView={1}

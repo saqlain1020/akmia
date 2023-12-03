@@ -14,6 +14,7 @@ import Contact from "./components/Contact";
 import ScrollDown from "src/components/ScrollDown/ScrollDown";
 import GalleryCarousel from "./components/GalleryCarousel";
 import Articles from "./components/Articles";
+import Whatsapp from "src/components/Whatsapp/Whatsapp";
 const useStyles = makeStyles()(() => ({
   root: {
     // height: "100%",
@@ -32,14 +33,15 @@ const Home: FC = () => {
       <SurveyReport />
       <Intro />
       <Manifesto />
-      <Peoples />
       <AboutFounder />
       <GalleryCarousel />
+      <Peoples />
       <Articles />
       <Interview />
       <Gallery />
       <Contact />
       <ScrollDown />
+      <Whatsapp/>
     </Box>
   );
 };

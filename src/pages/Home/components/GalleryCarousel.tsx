@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { makeStyles } from "src/utils/makeStyles";
 import { Swiper, SwiperSlide } from "swiper/react";
 import pics from "src/config/pics";

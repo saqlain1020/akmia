@@ -1,7 +1,6 @@
-import { Box, Container, Card, Typography, Grid, CardActionArea, CardContent, CardMedia } from "@mui/material";
+import { Box, Container, Card, Typography, CardActionArea, CardContent, CardMedia } from "@mui/material";
 import { Fonts } from "src/utils";
 import { makeStyles } from "src/utils/makeStyles";
-import Slide from "react-reveal/Slide";
 import LightSpeed from "react-reveal/LightSpeed";
 import { Link } from "react-router-dom";
 import peoples from "src/config/peoples";

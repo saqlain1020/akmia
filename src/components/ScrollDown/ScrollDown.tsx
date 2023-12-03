@@ -9,8 +9,9 @@ const useStyles = makeStyles()((theme) => ({
     border: `2px solid ${theme.palette.primary.main}`,
     color: theme.palette.primary.main,
     position: "fixed",
-    bottom: 20,
-    right: 20,
+    bottom: 80,
+    right: 24,
+    zIndex: 100,
   },
 }));
 
