@@ -3,12 +3,6 @@ import { makeStyles } from "src/utils/makeStyles";
 import { Swiper, SwiperSlide } from "swiper/react";
 import pics from "src/config/pics";
 import Lightbox, { ControllerRef } from "yet-another-react-lightbox";
-import "yet-another-react-lightbox/styles.css";
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { Box, Container, Typography } from "@mui/material";
 import { Fonts } from "src/utils";
@@ -19,7 +13,6 @@ import Slideshow from "yet-another-react-lightbox/plugins/slideshow";
 import Share from "yet-another-react-lightbox/plugins/share";
 import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
 import Download from "yet-another-react-lightbox/plugins/download";
-import "yet-another-react-lightbox/plugins/thumbnails.css";
 
 const useStyles = makeStyles()((theme) => ({
   heading: {
@@ -48,7 +41,7 @@ const useStyles = makeStyles()((theme) => ({
       zIndex: -1,
     },
     "&:hover": {
-      color: "black",
+      color: theme.palette.primary.main,
       textShadow: "0px 0px 0px rgba(0,0,0,0.6)",
       "&::before": {
         boxShadow: "0px 0px 0px rgba(0,0,0,0.6)",
@@ -70,7 +63,7 @@ const useStyles = makeStyles()((theme) => ({
 const GalleryCarousel = () => {
   const { classes } = useStyles();
   const ref = React.useRef<ControllerRef>(null);
-  const [index, setIndex] = React.useState(0);
+  const [index, setIndex] = React.useState(-1);
 
   const handleImageClick = (index: number) => {
     setIndex(index);

@@ -5,8 +5,18 @@ import Slide from "react-reveal/Slide";
 import LightSpeed from "react-reveal/LightSpeed";
 import { Link } from "react-router-dom";
 import peoples from "src/config/peoples";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 const useStyles = makeStyles()((theme) => ({
+  root: {
+    "& .swiper-button-next,.swiper-button-prev": {
+      color: "black !important",
+    },
+    "& .swiper-pagination-bullet": {
+      backgroundColor: "black !important",
+    },
+  },
   heading: {
     position: "relative",
     width: "fit-content",
@@ -60,7 +70,7 @@ const Peoples = () => {
   const { classes } = useStyles();
 
   return (
-    <Box id="executives" sx={{ background: "#f2f3f5" }}>
+    <Box id="executives" sx={{ background: "#f2f3f5" }} className={classes.root}>
       <Container maxWidth="lg" sx={{ pt: 5, pb: 5 }}>
         <LightSpeed left>
           <Typography
@@ -73,22 +83,59 @@ const Peoples = () => {
             Executive Title Members
           </Typography>
         </LightSpeed>
-        <Grid container spacing={{ xs: 1, sm: 2, md: 4 }}>
-          {/* <Grid item xs={6} sm={6} md={4}>
-            <Slide bottom>
-              <Box className={classes.box} component={Link} to="/person/badar">
-                <img src={badar} alt="Badar Iqbal" width="100%" />
-                <Card className={clsx(classes.boxCard, "boxCard")}>
-                  <Typography variant="h5" fontWeight={"bold"} fontSize={{ xs: 12, sm: 16, md: 20 }}>
-                    Badar Iqbal
-                  </Typography>
-                  <Typography color="primary" fontSize={{ xs: 10, sm: 12, md: 16 }}>
-                    Founder Chairman
-                  </Typography>
+        <Swiper
+          slidesPerView={1}
+          autoHeight
+          // centeredSlides={true}
+          loop={true}
+          spaceBetween={10}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          pagination={{
+            clickable: true,
+          }}
+          breakpoints={{
+            400: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 10,
+            },
+            768: {
+              slidesPerView: 4,
+              spaceBetween: 10,
+            },
+          }}
+          navigation={true}
+          modules={[Autoplay, Pagination, Navigation]}
+        >
+          {peoples.map((item, i) => (
+            <SwiperSlide key={i}>
+              <Link to={`/person/${item.tag}`}>
+                <Card elevation={1} sx={{ mb: 3 }}>
+                  <CardActionArea>
+                    <CardMedia component="img" image={item.image} alt={item.name} sx={{ aspectRatio: "1/1" }} />
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" fontWeight={600}>
+                        {item.name}
+                      </Typography>
+                      {item.titleCardLines.map((item) => (
+                        <Typography key={item} variant="body2" color="primary">
+                          {item}
+                        </Typography>
+                      ))}
+                    </CardContent>
+                  </CardActionArea>
                 </Card>
-              </Box>
-            </Slide>
-          </Grid> */}
+              </Link>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+        {/* <Grid container spacing={{ xs: 1, sm: 2, md: 4 }}>
           {peoples.map((item, i) => (
             <Grid item xs={6} key={i} sm={6} md={4}>
               <Slide bottom>
@@ -112,7 +159,7 @@ const Peoples = () => {
               </Slide>
             </Grid>
           ))}
-        </Grid>
+        </Grid> */}
       </Container>
     </Box>
   );

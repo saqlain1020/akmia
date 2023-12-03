@@ -64,7 +64,7 @@ const useStyles = makeStyles()((theme) => ({
 
 const Gallery = () => {
   const { classes } = useStyles();
-  const [select, setSelect] = useState("1");
+  const [select, setSelect] = useState("2");
 
   return (
     <div id="gallery">
@@ -76,11 +76,10 @@ const Gallery = () => {
           fontFamily={Fonts.Monteserrat}
           fontWeight={800}
         >
-          Gallery
+          Marbles
         </Typography>
         <Box sx={{ display: "flex", justifyContent: "flex-end", pr: 2, mt: 2 }}>
-          <Select sx={{ ml: "auto" }} value={select} onChange={(e) => setSelect(e.target.value)}>
-            <MenuItem value={"1"}>Pictures</MenuItem>
+          <Select fullWidth sx={{ ml: "auto" }} value={select} onChange={(e) => setSelect(e.target.value)}>
             <MenuItem value={"2"}>Machinery</MenuItem>
             <MenuItem value={"3"}>Venetes</MenuItem>
             <MenuItem value={"4"}>Flooring</MenuItem>

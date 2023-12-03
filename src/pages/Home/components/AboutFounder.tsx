@@ -36,7 +36,7 @@ const useStyles = makeStyles()((theme) => ({
 const AboutFounder = () => {
   const { classes } = useStyles();
   return (
-    <Box sx={{ mt: 4 }} id="about">
+    <Box sx={{ mt: 4, pb: 4 }} id="about">
       <Container maxWidth="lg">
         <Typography variant="h3" className={classes.heading}>
           About Founder

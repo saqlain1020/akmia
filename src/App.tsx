@@ -6,6 +6,12 @@ import { Box } from "@mui/material";
 import Navbar from "./components/Navbar/Navbar";
 import Person from "./pages/Person/Person";
 
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import "yet-another-react-lightbox/plugins/thumbnails.css";
+import "yet-another-react-lightbox/styles.css";
+
 function App() {
   const { pathname } = useLocation();
 

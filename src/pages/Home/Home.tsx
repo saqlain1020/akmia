@@ -13,6 +13,7 @@ import AboutFounder from "./components/AboutFounder";
 import Contact from "./components/Contact";
 import ScrollDown from "src/components/ScrollDown/ScrollDown";
 import GalleryCarousel from "./components/GalleryCarousel";
+import Articles from "./components/Articles";
 const useStyles = makeStyles()(() => ({
   root: {
     // height: "100%",
@@ -32,9 +33,10 @@ const Home: FC = () => {
       <Intro />
       <Manifesto />
       <Peoples />
-      <Interview />
       <AboutFounder />
       <GalleryCarousel />
+      <Articles />
+      <Interview />
       <Gallery />
       <Contact />
       <ScrollDown />
