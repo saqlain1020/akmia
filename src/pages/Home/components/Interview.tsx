@@ -110,10 +110,10 @@ const Interview = () => {
             <SwiperSlide>
               <Box>
                 <Typography variant="body1" className={classes.interviewText}>
-                  The government of Sindh is involving these capitalist people. Which benefits NATO Marble Industries.
-                  And not to the country. For the improvement of industries, the government should initiate joint
-                  partnerships with local industrialists and foreign investors. Taki continued to improve with local
-                  labors.
+                  The Sindh government is engaging with these capitalist individuals, leading to advantages for NATO
+                  Marble Industries rather than benefiting the country. To enhance the industrial sector, the government
+                  should establish collaborative ventures with both local industrialists and foreign investors,
+                  fostering improvement with the involvement of local labor.
                 </Typography>
                 <Box
                   component="video"
