@@ -1,10 +1,11 @@
 import { Box, Container, Grid, Typography } from "@mui/material";
 import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 import { makeStyles } from "src/utils/makeStyles";
-import Lottie from "react-lottie";
-import animationData from "src/assets/lottie/contact.json";
+// import Lottie from "react-lottie";
+// import animationData from "src/assets/lottie/contact.json";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import LanguageIcon from "@mui/icons-material/Language";
+
 const useStyles = makeStyles()((theme) => ({
   heading: {
     position: "relative",

@@ -3,6 +3,7 @@ import { Fonts } from "src/utils";
 import { makeStyles } from "src/utils/makeStyles";
 import vid from "src/assets/vids/interview1.mp4";
 import vid2 from "src/assets/vids/interview2.mp4";
+import vid3 from "src/assets/vids/interview3.mp4";
 import Fade from "react-reveal/Fade";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -47,6 +48,18 @@ const useStyles = makeStyles()((theme) => ({
         height: "100%",
       },
     },
+  },
+  interviewText: {
+    // color: theme.palette.primary.main,
+    color: "white",
+    textTransform: "capitalize",
+    fontWeight: 600,
+    borderRadius: 4,
+    borderBottomLeftRadius: 0,
+    borderBottomRightRadius: 0,
+    textAlign: "center",
+    background: theme.palette.primary.main,
+    padding: 16,
   },
 }));
 
@@ -93,6 +106,26 @@ const Interview = () => {
                   boxShadow: "0px 10px 16px rgba(0,0,0,0.8)",
                 }}
               />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Box>
+                <Typography variant="body1" className={classes.interviewText}>
+                  The government of Sindh is involving these capitalist people. Which benefits NATO Marble Industries.
+                  And not to the country. For the improvement of industries, the government should initiate joint
+                  partnerships with local industrialists and foreign investors. Taki continued to improve with local
+                  labors.
+                </Typography>
+                <Box
+                  component="video"
+                  src={vid3}
+                  controls
+                  width={"100%"}
+                  sx={{
+                    borderRadius: 1,
+                    boxShadow: "0px 10px 16px rgba(0,0,0,0.8)",
+                  }}
+                />
+              </Box>
             </SwiperSlide>
           </Swiper>
           {/* <Box
