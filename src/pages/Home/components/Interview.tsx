@@ -4,6 +4,7 @@ import { makeStyles } from "src/utils/makeStyles";
 import vid from "src/assets/vids/interview1.mp4";
 import vid2 from "src/assets/vids/interview2.mp4";
 import vid3 from "src/assets/vids/interview3.mp4";
+import vid4 from "src/assets/vids/vid3.mp4";
 import Fade from "react-reveal/Fade";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -83,6 +84,18 @@ const Interview = () => {
             navigation={true}
             modules={[Pagination, Navigation]}
           >
+            <SwiperSlide>
+              <Box
+                component="video"
+                src={vid4}
+                controls
+                width={"100%"}
+                sx={{
+                  borderRadius: 1,
+                  boxShadow: "0px 10px 16px rgba(0,0,0,0.8)",
+                }}
+              />
+            </SwiperSlide>
             <SwiperSlide>
               <Box
                 component="video"
