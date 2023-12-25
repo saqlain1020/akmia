@@ -8,6 +8,16 @@ import shoaib from "src/assets/images/people/shoaib.png";
 import mansoor from "src/assets/images/people/mansoor.png";
 import muneer from "src/assets/images/people/muneer.jpeg";
 import adnan from "src/assets/images/people/adnan.jpeg";
+import abdulraheem from "src/assets/images/people/abdulraheem.png";
+import faisalwasi from "src/assets/images/people/faisalwasi.png";
+import sharaf from "src/assets/images/people/sharaf.png";
+import waseem from "src/assets/images/people/waseem.png";
+import shahjahan from "src/assets/images/people/shahjahan.png";
+import saleem from "src/assets/images/people/saleem.png";
+import ahmad from "src/assets/images/people/ahmad.png";
+import ahsanullah from "src/assets/images/people/ahsanullah.png";
+import raj from "src/assets/images/people/raj.png";
+import faisalqureshi from "src/assets/images/people/faisalqureshi.png";
 
 interface IPeople {
   name: string;
@@ -114,6 +124,86 @@ const peoples: IPeople[] = [
     titleCardLines: ["New Dilawer Marble", "."],
     tag: "adnan",
     image: adnan,
+  },
+  {
+    name: "Abdul Raheem",
+    industry: ["Sultan e Hindh Marble"],
+    contact: [],
+    titleCardLines: ["Sultan e Hindh Marble", "."],
+    tag: "abdulraheem",
+    image: abdulraheem,
+  },
+  {
+    name: "Faisalwasi Ansari",
+    industry: ["Sayada Marble"],
+    contact: [],
+    titleCardLines: ["Sayada Marble", "."],
+    tag: "faisalwasi",
+    image: faisalwasi,
+  },
+  {
+    name: "Sharf Ahmed",
+    industry: ["Chustia Sulaimania Marble"],
+    contact: [],
+    titleCardLines: ["Chustia Sulaimania Marble", "."],
+    tag: "sharaf",
+    image: sharaf,
+  },
+  {
+    name: "Waseem Raja",
+    industry: ["Sono Marble"],
+    contact: [],
+    titleCardLines: ["Sono Marble", "."],
+    tag: "waseem",
+    image: waseem,
+  },
+  {
+    name: "Shahjahan",
+    industry: ["Shahjahan Muskan Marble"],
+    contact: [],
+    titleCardLines: ["Shahjahan Muskan Marble", "."],
+    tag: "shahjahan",
+    image: shahjahan,
+  },
+  {
+    name: "M. Saleem",
+    industry: ["Safa Marble"],
+    contact: [],
+    titleCardLines: ["Safa Marble", "."],
+    tag: "saleem",
+    image: saleem,
+  },
+  {
+    name: "Ahmad Khan",
+    industry: ["Sindh Marble"],
+    contact: [],
+    titleCardLines: ["Sindh Marble", "."],
+    tag: "ahmad",
+    image: ahmad,
+  },
+  {
+    name: "Ahsanullah (Shina)",
+    industry: ["Shina Marble"],
+    contact: [],
+    titleCardLines: ["Shina Marble", "."],
+    tag: "ahsanullah",
+    image: ahsanullah,
+  },
+  {
+    name: "Raj Muhammad",
+    industry: ["Sajed ullah Marble"],
+    contact: [],
+    titleCardLines: ["Sajed ullah Marble", "."],
+    tag: "raj",
+    image: raj,
+  },
+  {
+    name: "Faisal Qureshi",
+    industry: ["Majeed & Sons Marble"],
+    contact: [],
+    titleCardLines: ["Majeed & Sons Marble", "."],
+    tag: "faisalqureshi",
+    image: faisalqureshi,
   },
 ];
 
